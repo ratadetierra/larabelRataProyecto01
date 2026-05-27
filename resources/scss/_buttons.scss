@@ -1,0 +1,8 @@
+// resources/scss/_buttons.scss
+@import 'variables';
+@import 'mixins';
+
+.btn-custom {
+  @include btn-variant($primary);
+  font-weight: 600;
+}

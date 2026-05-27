@@ -1,0 +1,10 @@
+// resources/scss/_mixins.scss
+@mixin btn-variant($bg, $color: #fff, $radius: .35rem) {
+  background-color: $bg;
+  color: $color;
+  border-radius: $radius;
+  padding: .5rem 1rem;
+  display: inline-block;
+  text-align: center;
+  &:hover { filter: brightness(.95); }
+}

@@ -1,0 +1,61 @@
+// resources/scss/_variables.scss
+// Valores base necesarios para SB Admin y parciales
+
+// Layout / dimensiones
+$topbar-base-height: 56px !default;
+$sidebar-collapsed-width: 80px !default;
+$sidebar-expanded-width: 250px !default;
+
+// Paleta gris (valores compatibles con Bootstrap)
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+// Colores principales (ajusta si tu tema requiere otros)
+$primary: #4e73df !default;
+$secondary: #6c757d !default;
+$success: #1cc88a !default;
+$danger: #e74a3b !default;
+$warning: #f6c23e !default;
+$info: #36b9cc !default;
+
+// Espaciados y utilidades
+$body-bg: #ffffff !default;
+$body-color: #212529 !default;
+
+// Añadido para SB Admin — dimensiones y variables adicionales
+$sidebar-base-width: 250px !default;
+$sidebar-collapsed-width: 80px !default;
+$sidebar-expanded-width: 250px !default;
+$sidebar-toggle-width: 70px !default;
+
+$topbar-base-height: 56px !default;
+$topbar-sm-height: 48px !default;
+
+$brand-primary: $primary !default;
+$brand-secondary: $secondary !default;
+
+/* Paleta extendida (por si otros parciales la usan) */
+$white: #ffffff !default;
+$black: #000000 !default;
+
+/* Ajustes de layout y utilidades */
+$container-max-width-lg: 1140px !default;
+$grid-gutter-width: 1.5rem !default;
+
+/*  Agregar ruta*/
+// ruta relativa desde public/
+
+$login-image: "/images/login-bg.jpg" !default;
+$register-image: "/images/amilani.jpg" !default;
+$password-image: "/images/amilani.jpg" !default;
+
+/* Colores de marcas usados por los botones sociales */
+$brand-google: #ea4335 !default;   // rojo Google
+$brand-facebook: #1877f2 !default; // ejemplo adicional si hace falta
