@@ -17,5 +17,9 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^7.2.0",
         "bootstrap": "^5.3.8"
-    }
+    },
+    "files.associations": {
+  "*.php": "php"
+}
+
 }
