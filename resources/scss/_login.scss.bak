@@ -1,26 +1,30 @@
-// Pulling these images from Unsplash
-// Toshi the dog from https://unsplash.com/@charlesdeluvio - what a funny dog...
+// resources/scss/_login.scss.bak
 
+// resources/scss/_login.scss
+@use 'variables' as variables;
+@use 'mixins';
+
+// Fondo de login, registro y password
 .bg-login-image {
-  background: url($login-image);
+  background: url(variables.$login-image);
   background-position: center;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url($register-image);
+  background: url(variables.$register-image);
   background-position: center;
   background-size: cover;
 }
 
 .bg-password-image {
-  background: url($password-image);
+  background: url(variables.$password-image);
   background-position: center;
   background-size: cover;
 }
 
+// Formularios de usuario
 form.user {
-
   .custom-checkbox.small {
     label {
       line-height: 1.5rem;
@@ -38,13 +42,13 @@ form.user {
     border-radius: 10rem;
     padding: 0.75rem 1rem;
   }
-
 }
 
+// Botones sociales
 .btn-google {
-  @include button-variant($brand-google, $white);
+  @include mixins.btn-variant(variables.$brand-google, variables.$white);
 }
 
 .btn-facebook {
-  @include button-variant($brand-facebook, $white);
+  @include mixins.btn-variant(variables.$brand-facebook, variables.$white);
 }

@@ -1,21 +1,26 @@
 // Custom Dropdown Styling
+// sources/scss/_dropdowns.scss
+// resources/scss/_dropdowns.scss
+@use 'variables' as variables;
 
+// Custom Dropdown Styling
 .dropdown {
   .dropdown-menu {
-    font-size: $dropdown-font-size;
+    font-size: variables.$dropdown-font-size;
+
     .dropdown-header {
-      @extend .text-uppercase;
+      @extend .text-uppercase; // asegúrate de tener esta clase definida en tu utilitario
       font-weight: 800;
       font-size: 0.65rem;
-      color: $gray-500;
+      color: variables.$gray-500;
     }
   }
 }
 
 // Utility class to hide arrow from dropdown
-
 .dropdown.no-arrow {
   .dropdown-toggle::after {
     display: none;
   }
 }
+

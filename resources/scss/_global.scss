@@ -1,5 +1,8 @@
-// Global component styles
+// resources/scss/_global.scss
+@use 'variables' as variables;
+@use "sass:color";
 
+// Global component styles
 html {
   position: relative;
   min-height: 100%;
@@ -18,10 +21,12 @@ a {
 // Main page wrapper
 #wrapper {
   display: flex;
+
   #content-wrapper {
-    background-color: $gray-100;
+    background-color: variables.$gray-100;
     width: 100%;
     overflow-x: hidden;
+
     #content {
       flex: 1 0 auto;
     }
@@ -31,8 +36,8 @@ a {
 // Set container padding to match gutter width instead of default 15px
 .container,
 .container-fluid {
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
+  padding-left: variables.$grid-gutter-width;
+  padding-right: variables.$grid-gutter-width;
 }
 
 // Scroll to top button
@@ -44,16 +49,19 @@ a {
   width: 2.75rem;
   height: 2.75rem;
   text-align: center;
-  color: $white;
-  background: fade-out($gray-800, .5);
+  color: variables.$white;
+  background: color.adjust(variables.$gray-800, $alpha: -0.5);
   line-height: 46px;
+
   &:focus,
   &:hover {
-    color: white;
+    color: variables.$white;
   }
+
   &:hover {
-    background: $gray-800;
+    background: variables.$gray-800;
   }
+
   i {
     font-weight: 800;
   }

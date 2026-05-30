@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>@yield('title','Admin')</title>
-  @vite(['resources/css/admin.scss','resources/js/app.js'])
+ @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+
 </head>
 <body>
   <div id="wrapper" class="d-flex flex-column min-vh-100">

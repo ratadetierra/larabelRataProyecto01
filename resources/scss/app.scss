@@ -1,0 +1,30 @@
+// resources/scss/app.scss
+// Import Bootstraps y configuración global
+
+@use "sass:math";
+@use "sass:color";
+
+// Variables y mixins globales
+@use './variables' as variables;
+@use './mixins' as mixins;
+
+// Parciales principales
+@use './buttons';
+@use './cards';
+@use './navs/sidebar';
+@use './navs/topbar';
+
+// Utilidades centralizadas
+@use './utilities';
+
+// Otros parciales
+@use './login';
+@use './welcome';
+@use './admin';
+
+// Fuentes externas (Instrument Sans desde Bunny.net)
+@import url("https://fonts.bunny.net/css?family=instrument-sans:400,500,600");
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+}

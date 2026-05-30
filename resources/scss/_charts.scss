@@ -1,9 +1,15 @@
+
+// resources/scss/_charts.scss
+@use 'variables' as variables;
+@use 'mixins';
+
 // Area Chart
 .chart-area {
   position: relative;
   height: 10rem;
   width: 100%;
-  @include media-breakpoint-up(md) {
+
+  @include mixins.media-breakpoint-up(md) {
     height: 20rem;
   }
 }
@@ -13,7 +19,8 @@
   position: relative;
   height: 10rem;
   width: 100%;
-  @include media-breakpoint-up(md) {
+
+  @include mixins.media-breakpoint-up(md) {
     height: 20rem;
   }
 }
@@ -23,7 +30,8 @@
   position: relative;
   height: 15rem;
   width: 100%;
-  @include media-breakpoint-up(md) {
+
+  @include mixins.media-breakpoint-up(md) {
     height: calc(20rem - 43px) !important;
   }
 }

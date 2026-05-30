@@ -1,3 +1,8 @@
+// resources/scss/utilities/_rotate.scss
+@use '../variables' as variables;
+
+// Rotate utilities
+
 .rotate-15 {
   transform: rotate(15deg);
 }

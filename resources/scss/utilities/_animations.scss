@@ -1,0 +1,18 @@
+// resources/scss/_animations.scss
+@use '../variables' as variables;
+
+
+.animated--grow-in {
+  animation: growIn 0.3s ease-in-out;
+}
+
+@keyframes growIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

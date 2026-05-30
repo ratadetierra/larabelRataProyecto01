@@ -1,3 +1,8 @@
+// resources/scss/utilities/_display.scss
+@use '../variables' as variables;
+
+// Display utilities
+
 // Overflow Hidden
 .o-hidden {
   overflow: hidden !important;

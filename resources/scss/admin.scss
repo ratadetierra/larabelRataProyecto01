@@ -1,0 +1,23 @@
+// resources/css/admin.scss
+
+// 1) Variables y mixins locales (se cargan primero)
+@use "../scss/variables" as variables;
+@use "../scss/mixins" as mixins;
+
+// 2) Bootstrap desde node_modules
+@use "bootstrap/scss/bootstrap";
+
+// 3) Global helpers
+@use "../scss/global";
+
+// 4) Estilos del tema SB Admin
+@use "../scss/sb-admin-2";
+
+// 5) Parciales propios (overrides, botones, utilidades)
+@use "../scss/buttons";
+@use "../scss/utilities";
+
+// 6) Iconos desde node_modules (FontAwesome)
+//@use "@fortawesome/fontawesome-free/css/all.css";
+
+@import "@fortawesome/fontawesome-free/css/all.css";

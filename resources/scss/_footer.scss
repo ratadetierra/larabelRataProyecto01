@@ -1,9 +1,14 @@
+// resources/scss/_footer.scss
+@use 'variables' as variables;
+
 footer.sticky-footer {
   padding: 2rem 0;
   flex-shrink: 0;
+
   .copyright {
     line-height: 1;
     font-size: 0.8rem;
+    color: variables.$gray-600; // opcional: usar paleta de grises
   }
 }
 

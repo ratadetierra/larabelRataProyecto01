@@ -1,3 +1,52 @@
-@import "navs/global.scss";
-@import "navs/topbar.scss";
-@import "navs/sidebar.scss";
+// resources/scss/_navs.scss
+@use 'variables' as variables;
+@use 'mixins';
+
+// Pulling these images from Unsplash
+// Toshi the dog from https://unsplash.com/@charlesdeluvio - what a funny dog...
+
+.bg-login-image {
+  background: url(variables.$login-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-register-image {
+  background: url(variables.$register-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-password-image {
+  background: url(variables.$password-image);
+  background-position: center;
+  background-size: cover;
+}
+
+form.user {
+  .custom-checkbox.small {
+    label {
+      line-height: 1.5rem;
+    }
+  }
+
+  .form-control-user {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .btn-user {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+.btn-google {
+  @include mixins.btn-variant(variables.$brand-google, variables.$white);
+}
+
+.btn-facebook {
+  @include mixins.btn-variant(variables.$brand-facebook, variables.$white);
+}

@@ -1,7 +1,10 @@
-@each $color, $value in $theme-colors {
-  @each $position in ['left', 'bottom'] {
+// resources/scss/utilities/_border.scss
+@use '../variables' as variables;
+
+@each $color, $value in variables.$theme-colors {
+  @each $position in ('left', 'bottom') {
     .border-#{$position}-#{$color} {
-      border-#{$position}: .25rem solid $value !important;
+      border-#{$position}: .25rem solid #{$value} !important;
     }
   }
 }

@@ -1,4 +1,7 @@
 // resources/scss/_mixins.scss
+// Mixins globales para SB Admin
+
+// Botón con variantes de color
 @mixin btn-variant($bg, $color: #fff, $radius: .35rem) {
   background-color: $bg;
   color: $color;
@@ -6,5 +9,52 @@
   padding: .5rem 1rem;
   display: inline-block;
   text-align: center;
-  &:hover { filter: brightness(.95); }
+
+  &:hover {
+    filter: brightness(.95);
+  }
+}
+
+// Breakpoints ascendentes (responsive)
+@mixin media-breakpoint-up($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 576px) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 992px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1200px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (min-width: 1400px) { @content; }
+  }
+}
+
+// Breakpoints descendentes
+@mixin media-breakpoint-down($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 575.98px) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: 767.98px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: 991.98px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: 1199.98px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (max-width: 1399.98px) { @content; }
+  }
+}
+
+// Centrado flexbox rápido
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Texto truncado con puntos suspensivos
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
