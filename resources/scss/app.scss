@@ -1,8 +1,14 @@
 // resources/scss/app.scss
-// Import Bootstraps y configuración global
 
+// Configuración global
 @use "sass:math";
 @use "sass:color";
+
+// Bootstrap primero
+@use "bootstrap/scss/bootstrap" as *;
+
+// Luego tu neumorfismo
+@use 'neumorphism';
 
 // Variables y mixins globales
 @use './variables' as variables;
@@ -22,9 +28,11 @@
 @use './welcome';
 @use './admin';
 
-// Fuentes externas (Instrument Sans desde Bunny.net)
+// Import externos (estos deben ir al final)
+@import "@fortawesome/fontawesome-free/css/all.css";
 @import url("https://fonts.bunny.net/css?family=instrument-sans:400,500,600");
 
+// Reglas globales
 body {
   font-family: 'Instrument Sans', sans-serif;
 }

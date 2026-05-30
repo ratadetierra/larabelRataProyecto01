@@ -5,7 +5,9 @@
 @use "../scss/mixins" as mixins;
 
 // 2) Bootstrap desde node_modules
-@use "bootstrap/scss/bootstrap";
+@use 'bootstrap/scss/bootstrap' as *;
+
+
 
 // 3) Global helpers
 @use "../scss/global";

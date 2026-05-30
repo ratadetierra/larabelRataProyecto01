@@ -7,3 +7,7 @@
 @use 'utilities/progress';
 @use 'utilities/display';
 @use 'utilities/animations';
+
+.text-uppercase {
+  text-transform: uppercase;
+}

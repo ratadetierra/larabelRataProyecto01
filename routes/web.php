@@ -13,20 +13,27 @@ use App\Http\Middleware\EnsureUserIsAdmin;
 |--------------------------------------------------------------------------
 */
 
+// Vista de inicio personalizada (home.blade.php)
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
+
+// Página principal por defecto (welcome.blade.php)
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Rutas públicas mínimas para topbar (opcional)
+// Vista de perfil del usuario (profile/show.blade.php)
 Route::get('/profile', function () {
     return view('profile.show');
 })->name('profile.show');
 
+// Vista de configuración del sistema (settings/index.blade.php)
 Route::get('/settings', function () {
     return view('settings.index');
 })->name('settings');
 
-// Logout seguro (POST)
+// Logout seguro (no tiene vista, solo acción)
 Route::post('/logout', function (Request $request) {
     Auth::logout();
     $request->session()->invalidate();
@@ -34,24 +41,26 @@ Route::post('/logout', function (Request $request) {
     return redirect('/');
 })->name('logout');
 
-// Rutas admin protegidas por auth + middleware EnsureUserIsAdmin (FQCN)
+// Grupo de rutas admin protegidas por auth + EnsureUserIsAdmin
 Route::middleware(['auth', EnsureUserIsAdmin::class])
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
+        // Dashboard principal (admin/dashboard.blade.php)
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+        // Ruta de búsqueda → redirige al dashboard (no tiene vista propia)
         Route::get('/search', function () {
             return redirect()->route('admin.dashboard');
         })->name('search');
-        // añade aquí más rutas admin...
     });
 
-// Ruta de login (vista)
+// Vista de login (auth/login.blade.php)
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
-// Ruta POST para procesar el login (formulario debe apuntar a route('login.post'))
+// Procesar login (POST) → valida credenciales y redirige al dashboard
 Route::post('/login', function (Request $request) {
     $credentials = $request->validate([
         'email' => ['required', 'email'],
@@ -69,8 +78,8 @@ Route::post('/login', function (Request $request) {
 })->name('login.post');
 
 /*
-| If you have Breeze installed, you can include its auth routes instead:
+| Si tienes Breeze instalado, puedes incluir sus rutas de auth:
 | require __DIR__.'/auth.php';
 |
-| If you later enable Auth::routes() (laravel/ui), be careful with package compatibility.
+| Si luego habilitas Auth::routes() (laravel/ui), revisa compatibilidad.
 */

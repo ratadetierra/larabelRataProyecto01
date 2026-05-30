@@ -19,7 +19,9 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^7.2.0",
-        "bootstrap": "^5.3.8"
+        "bootstrap": "^5.3.8",
+        "chart.js": "^4.5.1",
+        "datatables.net-bs4": "^2.3.8"
     },
     "files.associations": {
         "*.php": "php"

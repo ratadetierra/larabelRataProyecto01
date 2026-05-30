@@ -9,7 +9,7 @@
     font-size: variables.$dropdown-font-size;
 
     .dropdown-header {
-      @extend .text-uppercase; // asegúrate de tener esta clase definida en tu utilitario
+      @extend .text-uppercase !optional; // asegúrate de tener esta clase definida en tu utilitario
       font-weight: 800;
       font-size: 0.65rem;
       color: variables.$gray-500;

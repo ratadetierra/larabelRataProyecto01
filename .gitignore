@@ -28,3 +28,8 @@ Thumbs.db
 public/sb-admin/vendor/
 .env
 public/sb-admin/vendor/
+/node_modules/
+/.env
+/public/sb-admin/vendor/
+/public/sb-admin/*.html
+/public/sb-admin/scss/

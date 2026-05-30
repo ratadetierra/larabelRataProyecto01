@@ -3,7 +3,8 @@
 @use './variables' as variables;
 
 // Import Bootstrap
-@use '../vendor/bootstrap/scss/bootstrap' as *;
+@use 'bootstrap/scss/bootstrap' as *;
+
 
 // Import Custom SB Admin 2 Mixins and Components
 @use './mixins';
